@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB BOOK</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f3f8;
+            color: #222;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .book {
+            background: white;
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0001;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #description {
+            display: none;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 WEB BOOK</h1>
+        <p>Современная электронная библиотека</p>
+    </header>
+
+    <main>
+        <h2>Наши книги</h2>
+
+        <div class="book">
+            <h3>JavaScript для начинающих</h3>
+            <p>Автор: Учебная библиотека</p>
+            <button onclick="showBook()">Читать книгу</button>
+
+            <div id="description">
+                <h3>Глава 1. Введение в JavaScript</h3>
+                <p>
+                    JavaScript — это язык программирования,
+                    который используется для создания
+                    интерактивных веб-сайтов.
+                </p>
+                <p>
+                    С его помощью можно создавать кнопки,
+                    формы, поиск и другие функции.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showBook() {
+            let text = document.getElementById("description");
+
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
